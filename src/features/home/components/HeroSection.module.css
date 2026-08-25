@@ -1,0 +1,120 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 5rem 1.5rem 4rem;
+  background-color: #fafafa;
+}
+
+.heading {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
+}
+
+.dark {
+  color: #1a1a1a;
+}
+
+.red {
+  color: #8b1a1a;
+}
+
+.subtitle {
+  max-width: 560px;
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  width: 100%;
+  max-width: 560px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.inputIcon {
+  color: #888;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.urlInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.95rem;
+  background: transparent;
+}
+
+.shortenBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #8b1a1a;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+.shortenBtn:hover {
+  background-color: #6d1414;
+}
+
+.badges {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+@media (max-width: 576px) {
+  .heading {
+    font-size: 2.2rem;
+  }
+
+  .inputWrapper {
+    flex-direction: column;
+    padding: 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .inputIcon {
+    display: none;
+  }
+
+  .urlInput {
+    width: 100%;
+    padding: 0.6rem;
+  }
+
+  .shortenBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}

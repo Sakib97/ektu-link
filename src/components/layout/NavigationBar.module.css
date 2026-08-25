@@ -1,0 +1,73 @@
+.navbar {
+  background-color: #fff;
+  border-bottom: 3px solid #8b1a1a;
+  padding: 0.75rem 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.brand:hover {
+  color: #1a1a1a;
+}
+
+.logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.offcanvas {
+  background-color: #fff;
+  border-right: 1px solid #eee;
+  width: 330px !important;
+}
+
+.navLink {
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: #8b1a1a;
+}
+
+.authNav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.signIn {
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  transition: color 0.2s;
+}
+
+.signIn:hover {
+  color: #8b1a1a;
+}
+
+.getStarted {
+  background-color: #8b1a1a;
+  color: #fff !important;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem !important;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.getStarted:hover {
+  background-color: #6d1414;
+  color: #fff !important;
+}

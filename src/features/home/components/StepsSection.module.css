@@ -1,0 +1,75 @@
+.steps {
+  padding: 4rem 1.5rem;
+  background-color: #fafafa;
+  border-top: 1px solid #eee;
+}
+
+.heading {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.label {
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.desc {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+  max-width: 240px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .heading {
+    font-size: 1.4rem;
+  }
+}

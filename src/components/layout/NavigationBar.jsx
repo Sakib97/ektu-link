@@ -1,40 +1,37 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import styles from "./NavigationBar.module.css";
+import logo from "/link.png";
 
 const NavigationBar = () => {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className={styles.navbar}>
       <Container>
-        <Navbar.Brand href="#home">EKTU LINK</Navbar.Brand>
+        <Navbar.Brand href="#home" className={styles.brand}>
+          <img src={logo} alt="ektu link" className={styles.logo} />
+          <span>ektu link</span>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-offcanvas" />
         <Navbar.Offcanvas
           id="navbar-offcanvas"
           aria-labelledby="navbar-offcanvas-label"
           placement="start"
+          className={styles.offcanvas}
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id="navbar-offcanvas-label">Menu</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link>
-              <NavDropdown title="Dropdown" id="navbar-offcanvas-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown>
+            <Nav className="mx-auto">
+              <Nav.Link href="#features" className={styles.navLink}>Features</Nav.Link>
+              <Nav.Link href="#pricing" className={styles.navLink}>Pricing</Nav.Link>
+              <Nav.Link href="#api-docs" className={styles.navLink}>API Docs</Nav.Link>
+            </Nav>
+            <Nav className={styles.authNav}>
+              <Nav.Link href="#signin" className={styles.signIn}>Sign In</Nav.Link>
+              <Nav.Link href="#get-started" className={styles.getStarted}>Get Started</Nav.Link>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
