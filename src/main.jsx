@@ -5,9 +5,14 @@ import App from "./App.jsx";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@flaticon/flaticon-uicons/css/all/all.css";
+import CustomQueryClientProvider from "./context/QueryClientProvider.jsx";
+
+
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
+    <CustomQueryClientProvider>
+      <App />
+    </CustomQueryClientProvider>
   </StrictMode>,
 );

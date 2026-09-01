@@ -12,7 +12,8 @@ const Footer = () => {
             <span>ektu link</span>
           </div>
           <p className={styles.copyright}>
-            &copy; 2024 ektu link. Professional URL management.
+            &copy; {new Date().getFullYear()} ektu link. Professional URL
+            management.
           </p>
         </div>
         <nav className={styles.links}>

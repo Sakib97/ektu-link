@@ -1,0 +1,243 @@
+.page {
+  display: flex;
+  min-height: calc(100vh - 70px);
+}
+
+/* ── Left branding panel ── */
+
+.left {
+  flex: 1;
+  background: linear-gradient(160deg, #1a1a1a 0%, #2c1010 60%, #8b1a1a 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2.5rem;
+}
+
+.leftContent {
+  max-width: 420px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.heroText {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.heroSub {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.featureIcon {
+  flex-shrink: 0;
+  font-size: 1.3rem;
+  margin-top: 2px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.featureItem div {
+  display: flex;
+  flex-direction: column;
+}
+
+.featureItem strong {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.featureItem span {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ── Right sign-in panel ── */
+
+.right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  background: #fafafa;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.3rem;
+}
+
+.cardSub {
+  font-size: 0.92rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.googleBtn,
+.facebookBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.googleBtn {
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+.googleBtn:hover {
+  background: #f7f7f7;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.facebookBtn {
+  background: #1877f2;
+  border: 1px solid #1877f2;
+  color: #fff;
+}
+
+.facebookBtn:hover {
+  background: #1565d8;
+}
+
+.terms {
+  font-size: 0.78rem;
+  color: #999;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.terms a {
+  color: #8b1a1a;
+  text-decoration: none;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e5e5e5;
+}
+
+.divider span {
+  font-size: 0.82rem;
+  color: #999;
+  white-space: nowrap;
+}
+
+.signupLink {
+  display: block;
+  text-align: center;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #8b1a1a;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.signupLink:hover {
+  color: #6d1414;
+  text-decoration: underline;
+}
+
+/* ── Mobile ── */
+
+@media (max-width: 768px) {
+  .page {
+    flex-direction: column;
+  }
+
+  .left {
+    padding: 2.5rem 1.5rem 2rem;
+  }
+
+  .heroText {
+    font-size: 1.6rem;
+  }
+
+  .features {
+    display: none;
+  }
+
+  .right {
+    padding: 2rem 1.25rem 3rem;
+  }
+
+  .card {
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+  }
+}

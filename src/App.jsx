@@ -1,15 +1,24 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
+
 import NavigationBar from "./components/layout/NavigationBar";
 import Footer from "./components/layout/Footer";
 import Homepage from "./features/home/pages/HomePage";
+import SignIn from "./features/auth/pages/SignIn";
 
 function App() {
   return (
-    <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+    <BrowserRouter>
       <NavigationBar />
-      <Homepage />
+      <Toaster />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/signin" element={<SignIn />} />
+      </Routes>
       <Footer />
-    </div>
+    </BrowserRouter>
+    
   );
 }
 
