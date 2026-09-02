@@ -1,0 +1,230 @@
+/* ── Stat cards ── */
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.statTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: 0.82rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.statIcon {
+  font-size: 1.15rem;
+}
+
+.statValue {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 0.25rem;
+}
+
+.statProgress {
+  height: 5px;
+  background: #eee;
+  border-radius: 3px;
+  margin-bottom: 0.4rem;
+  overflow: hidden;
+}
+
+.statProgressFill {
+  height: 100%;
+  background: #8b1a1a;
+  border-radius: 3px;
+}
+
+.statSub {
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+/* ── Section header ── */
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.filterBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.filterBtn:hover {
+  border-color: #aaa;
+}
+
+/* ── Links list ── */
+
+.linksList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.linkCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: box-shadow 0.15s;
+}
+
+.linkCard:hover {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.linkIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.linkInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.linkTitle {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #1a1a1a;
+  margin-bottom: 0.15rem;
+}
+
+.linkUrl {
+  font-size: 0.8rem;
+  color: #888;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0.4rem;
+}
+
+.linkMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.shortUrl {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #8b1a1a;
+}
+
+.aliasBadge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: #f5f0e8;
+  color: #8b6914;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+.linkStats {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.clickCount,
+.linkDate {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.82rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* ── View all ── */
+
+.viewAll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 100%;
+  padding: 0.85rem;
+  background: transparent;
+  border: 2px dashed #ddd;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #555;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.viewAll:hover {
+  border-color: #8b1a1a;
+  color: #8b1a1a;
+}
+
+/* ── Mobile ── */
+
+@media (max-width: 768px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .linkCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .linkStats {
+    width: 100%;
+    justify-content: flex-start;
+    padding-top: 0.5rem;
+    border-top: 1px solid #f0f0f0;
+  }
+}

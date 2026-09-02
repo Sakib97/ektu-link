@@ -8,7 +8,6 @@ import "@flaticon/flaticon-uicons/css/all/all.css";
 import CustomQueryClientProvider from "./context/QueryClientProvider.jsx";
 
 
-
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <CustomQueryClientProvider>

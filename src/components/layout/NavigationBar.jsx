@@ -21,7 +21,9 @@ const NavigationBar = () => {
   };
 
   return (
-    <Navbar expand="lg" className={styles.navbar}>
+    <Navbar 
+    expand="lg" 
+    className={` fixed-top ${styles.navbar}`}>
       <Container>
         <Navbar.Brand href="/" className={styles.brand}>
           <img src={logo} alt="ektu link" className={styles.logo} />
@@ -45,9 +47,7 @@ const NavigationBar = () => {
           onHide={handleClose}
         >
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title id="navbar-offcanvas-label">
-              Menu
-            </Offcanvas.Title>
+            <Offcanvas.Title id="navbar-offcanvas-label">Menu</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="mx-auto">
@@ -65,7 +65,12 @@ const NavigationBar = () => {
               {/* <Nav.Link href="#signin" className={styles.signIn}>
                 Sign In
               </Nav.Link> */}
-              <Nav.Link as={Link} to="/signin" onClick={handleClose} className={styles.getStarted}>
+              <Nav.Link
+                as={Link}
+                to="/signin"
+                onClick={handleClose}
+                className={styles.getStarted}
+              >
                 {/* Get Started */}
                 Sign In
               </Nav.Link>
