@@ -4,6 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import styles from "./NavigationBar.module.css";
 import logo from "/link.png";
+import logo2 from "/eL2.png";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import { CgMenuLeftAlt } from "react-icons/cg";
 import { RiMenu5Fill } from "react-icons/ri";
@@ -26,7 +27,7 @@ const NavigationBar = () => {
     className={` fixed-top ${styles.navbar}`}>
       <Container>
         <Navbar.Brand href="/" className={styles.brand}>
-          <img src={logo} alt="ektu link" className={styles.logo} />
+          <img src={logo2} alt="ektu link" className={styles.logo} />
           <span>ektu link</span>
         </Navbar.Brand>
 
