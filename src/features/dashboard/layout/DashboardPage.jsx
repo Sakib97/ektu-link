@@ -14,6 +14,8 @@ import {
   FiMenu,
   FiX,
 } from "react-icons/fi";
+import { CgMenuLeftAlt } from "react-icons/cg";
+import { PiLinkSimpleBold } from "react-icons/pi";
 import styles from "./DashboardPage.module.css";
 import logo from "/link.png";
 
@@ -96,7 +98,7 @@ const DashboardPage = () => {
             className={styles.menuBtn}
             onClick={() => setSidebarOpen(true)}
           >
-            <FiMenu />
+            <CgMenuLeftAlt size={28} />
           </button>
 
           <NavLink to="/" className={styles.homeLink}>
@@ -120,10 +122,19 @@ const DashboardPage = () => {
               <FiHelpCircle />
             </button>
             <button className={styles.createBtn}>
-              <FiPlus /> Create New Link
+              <PiLinkSimpleBold /> Shorten Link
             </button>
           </div>
         </header>
+
+         <div className={styles.searchBoxMobile}>
+            <FiSearch className={styles.searchIcon} />
+            <input
+              type="text"
+              placeholder="Search links..."
+              className={styles.searchInput}
+            />
+          </div>
 
         <div className={styles.content}>
           <Outlet />

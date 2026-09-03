@@ -1,5 +1,11 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route, Outlet, Navigate } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Outlet,
+  Navigate,
+} from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 
 import NavigationBar from "./components/layout/NavigationBar";
@@ -8,6 +14,8 @@ import Homepage from "./features/home/pages/HomePage";
 import SignIn from "./features/auth/pages/SignIn";
 import DashboardPage from "./features/dashboard/layout/DashboardPage.jsx";
 import LinksPage from "./features/dashboard/pages/LinksPage.jsx";
+import ScrollToTopOnNav from "./components/ui/ScrollToTopOnNav.jsx";
+import ScrollToTop from "./components/ui/ScrollToTop.jsx";
 
 function PublicLayout() {
   return (
@@ -23,6 +31,8 @@ function App() {
   return (
     <BrowserRouter>
       <Toaster />
+      <ScrollToTopOnNav/>
+      <ScrollToTop/>
       <Routes>
         <Route element={<PublicLayout />}>
           <Route path="/" element={<Homepage />} />

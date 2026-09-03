@@ -74,7 +74,9 @@
   font-weight: 500;
   color: #555;
   text-decoration: none;
-  transition: background 0.15s, color 0.15s;
+  transition:
+    background 0.15s,
+    color 0.15s;
 }
 
 .navItem:hover {
@@ -221,11 +223,24 @@
   display: flex;
   align-items: center;
   background: #f5f5f5;
-  border: 1px solid #eee;
-  border-radius: 8px;
+  border: 1px solid #acaaaa;;
+  border-radius: 20px;
   padding: 0.5rem 0.85rem;
   flex: 1;
-  max-width: 400px;
+  max-width: 500px;
+
+  /* Sets the top/bottom margins to 0 
+  and horizontally centers the 
+  element. */
+  margin: 0 auto;
+}
+
+.searchBox:focus-within {
+  border-color: #8b1a1a;
+}
+
+.searchBoxMobile{
+  display: none;
 }
 
 .searchIcon {
@@ -246,6 +261,10 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+
+  /* Absorbs all free space on the 
+  left, pushing the element 
+  entirely to the right. */
   margin-left: auto;
 }
 
@@ -326,13 +345,32 @@
     display: block;
   }
 
-  .createBtn span,
-  .createBtn {
-    font-size: 0;
+  .searchBox{
+    display: none;
+  }
+
+  .searchBoxMobile{
+    display: block;
+    display: flex;
+    align-items: center;
+    background: #f9f7f7;
+    border: 1px solid #acaaaa;
+    border-radius: 20px;
+    padding: 0.5rem 0.85rem;
+    flex: 1;
+    max-width: 500px;
+  
+    /* Sets the top/bottom margins to 0 
+    and horizontally centers the 
+    element. */
+    margin: 10px auto;
+  }
+
+  .searchBoxMobile:focus-within {
+    border-color: #8b1a1a;
   }
 
   .createBtn {
-    font-size: 0;
     padding: 0.55rem;
   }
 

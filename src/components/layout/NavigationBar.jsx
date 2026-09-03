@@ -60,6 +60,9 @@ const NavigationBar = () => {
               <Nav.Link href="#api-docs" className={styles.navLink}>
                 API Docs
               </Nav.Link>
+              <Nav.Link as={Link} to="/dashboard" className={styles.navLink}>
+                Dashboard 
+              </Nav.Link>
             </Nav>
             <Nav className={styles.authNav}>
               {/* <Nav.Link href="#signin" className={styles.signIn}>
