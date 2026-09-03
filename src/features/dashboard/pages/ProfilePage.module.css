@@ -1,0 +1,240 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 720px;
+  margin: auto;
+}
+
+/* ── Card ── */
+
+.card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 1.75rem;
+}
+
+/* ── Header / avatar area ── */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.avatarGroup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fce4e4;
+  color: #8b1a1a;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: #fce4e4;
+  color: #8b1a1a;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.email {
+  margin: 0.15rem 0 0;
+  font-size: 0.88rem;
+  color: #888;
+}
+
+.avatarBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.avatarBtn:hover {
+  border-color: #aaa;
+}
+
+/* ── Personal info ── */
+
+.sectionTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 1.25rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldFull {
+  grid-column: 1 / -1;
+}
+
+.label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.35rem;
+}
+
+/* ── Input row (value + action buttons) ── */
+
+.inputRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+.readonly,
+.readonlyTextarea {
+  flex: 1;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #fafafa;
+  font-size: 0.9rem;
+  color: #1a1a1a;
+  min-height: 40px;
+}
+
+.readonlyTextarea {
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.input,
+.textarea {
+  flex: 1;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #8b1a1a;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 0.9rem;
+  color: #1a1a1a;
+  outline: none;
+  font-family: inherit;
+  transition: box-shadow 0.15s;
+}
+
+.input:focus,
+.textarea:focus {
+  box-shadow: 0 0 0 3px rgba(139, 26, 26, 0.1);
+}
+
+.textarea {
+  resize: vertical;
+  line-height: 1.5;
+}
+
+/* ── Action buttons ── */
+
+.editBtn,
+.actionBtn {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  background: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  margin-top: 2px;
+}
+
+.editBtn {
+  color: #888;
+}
+
+.editBtn:hover {
+  color: #8b1a1a;
+  border-color: #8b1a1a;
+  background: #fef5f5;
+}
+
+.actionBtn {
+  color: #2e7d32;
+  border-color: #c8e6c9;
+}
+
+.actionBtn:hover {
+  background: #e8f5e9;
+  border-color: #81c784;
+}
+
+.rejectBtn {
+  color: #c62828;
+  border-color: #ffcdd2;
+}
+
+.rejectBtn:hover {
+  background: #ffebee;
+  border-color: #e57373;
+}
+
+/* ── Mobile ── */
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+}

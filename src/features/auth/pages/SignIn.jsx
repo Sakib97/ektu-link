@@ -3,7 +3,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FiLink, FiBarChart2, FiShield } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import styles from "./SignIn.module.css";
-import logo from "/link.png";
+import logo from "/eL2.png";
 
 const SignIn = () => {
   return (

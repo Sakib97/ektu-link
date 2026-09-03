@@ -14,6 +14,7 @@ import Homepage from "./features/home/pages/HomePage";
 import SignIn from "./features/auth/pages/SignIn";
 import DashboardPage from "./features/dashboard/layout/DashboardPage.jsx";
 import LinksPage from "./features/dashboard/pages/LinksPage.jsx";
+import ProfilePage from "./features/dashboard/pages/ProfilePage.jsx";
 import ScrollToTopOnNav from "./components/ui/ScrollToTopOnNav.jsx";
 import ScrollToTop from "./components/ui/ScrollToTop.jsx";
 
@@ -41,7 +42,8 @@ function App() {
 
         {/* Dashboard Routes will not have navigation bar and footer */}
         <Route path="/dashboard" element={<DashboardPage />}>
-          <Route index element={<Navigate to="links" replace />} />
+          <Route index element={<Navigate to="profile" replace />} />
+          <Route path="profile" element={<ProfilePage />} />
           <Route path="links" element={<LinksPage />} />
         </Route>
       </Routes>

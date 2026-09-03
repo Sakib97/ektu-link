@@ -13,13 +13,15 @@ import {
   FiPlus,
   FiMenu,
   FiX,
+  FiUser,
 } from "react-icons/fi";
 import { CgMenuLeftAlt } from "react-icons/cg";
 import { PiLinkSimpleBold } from "react-icons/pi";
 import styles from "./DashboardPage.module.css";
-import logo from "/link.png";
+import logo from "/eL2.png";
 
 const navItems = [
+  { to: "/dashboard/profile", icon: <FiUser />, label: "Profile" },
   { to: "/dashboard/links", icon: <FiLink />, label: "Links" },
   { to: "/dashboard/analytics", icon: <FiBarChart2 />, label: "Analytics" },
   {
@@ -45,7 +47,8 @@ const DashboardPage = () => {
       >
         <div className={styles.sidebarTop}>
           <div className={styles.brand}>
-            <div className={styles.avatar}>e</div>
+            {/* <div className={styles.avatar}>e</div> */}
+            <img src={logo} alt="ektu link" className={styles.logo} />
             <div>
               <div className={styles.brandName}>ektu link</div>
               <div className={styles.brandSub}>Personal Dashboard</div>
