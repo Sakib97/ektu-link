@@ -5,7 +5,29 @@ import { Link } from "react-router-dom";
 import styles from "./SignIn.module.css";
 import logo from "/eL2.png";
 
+import { useLocation, NavLink } from "react-router-dom";
+import { useState } from "react";
+import { useAuth } from "../../../context/AuthProvider";
+import { signInWithProvider } from "../functions/authFunc";
+
 const SignIn = () => {
+
+  const location = useLocation();
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState(null);
+
+  const handleSignIn = async (provider) => {
+    setLoading(true);
+    setErrorMsg(null);
+    try {
+      await signInWithProvider(provider);
+    } catch (error) {
+      setErrorMsg(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className={styles.page}>
       <div className={styles.left}>
@@ -53,11 +75,11 @@ const SignIn = () => {
           <p className={styles.cardSub}>Sign in to your account to continue</p>
 
           <div className={styles.buttons}>
-            <button className={styles.googleBtn}>
+            <button className={styles.googleBtn} onClick={() => handleSignIn("google")}>
               <FcGoogle size={22} />
               Continue with Google
             </button>
-            <button className={styles.facebookBtn}>
+            <button className={styles.facebookBtn} onClick={() => handleSignIn("facebook")}>
               <FaFacebook size={20} />
               Continue with Facebook
             </button>

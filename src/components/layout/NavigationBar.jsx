@@ -10,8 +10,11 @@ import { CgMenuLeftAlt } from "react-icons/cg";
 import { RiMenu5Fill } from "react-icons/ri";
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
+import { useAuth } from "../../context/AuthProvider";
 
 const NavigationBar = () => {
+  const { user, userMeta } = useAuth();
+
   // Offcanvas state
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -22,9 +25,7 @@ const NavigationBar = () => {
   };
 
   return (
-    <Navbar 
-    expand="lg" 
-    className={` fixed-top ${styles.navbar}`}>
+    <Navbar expand="lg" className={` fixed-top ${styles.navbar}`}>
       <Container>
         <Navbar.Brand href="/" className={styles.brand}>
           <img src={logo2} alt="ektu link" className={styles.logo} />
@@ -61,23 +62,32 @@ const NavigationBar = () => {
               <Nav.Link href="#api-docs" className={styles.navLink}>
                 API Docs
               </Nav.Link>
-              <Nav.Link as={Link} to="/dashboard" className={styles.navLink}>
-                Dashboard 
-              </Nav.Link>
+              {/* <Nav.Link as={Link} to="/dashboard" className={styles.navLink}>
+                Dashboard
+              </Nav.Link> */}
             </Nav>
             <Nav className={styles.authNav}>
-              {/* <Nav.Link href="#signin" className={styles.signIn}>
-                Sign In
-              </Nav.Link> */}
-              <Nav.Link
-                as={Link}
-                to="/signin"
-                onClick={handleClose}
-                className={styles.getStarted}
-              >
-                {/* Get Started */}
-                Sign In
-              </Nav.Link>
+              {user ? (
+                <Nav.Link
+                  as={Link}
+                  to="/dashboard"
+                  onClick={handleClose}
+                  className={styles.navLink}
+                >
+                  {user?.user_metadata?.name || user?.email}
+                </Nav.Link>
+              ) : (
+                <Nav.Link
+                  as={Link}
+                  to="/signin"
+                  onClick={handleClose}
+                  className={styles.getStarted}
+                >
+                  Sign In
+                </Nav.Link>
+              )}
+
+              {/*  */}
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
