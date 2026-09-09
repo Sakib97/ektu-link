@@ -70,6 +70,8 @@ export const AuthProvider = ({ children }) => {
         setLoading,
         userMeta,
         loading,
+        error,
+        setError,
       }}
     >
       {children}

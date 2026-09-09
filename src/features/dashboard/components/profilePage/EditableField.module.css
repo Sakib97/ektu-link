@@ -1,0 +1,109 @@
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldFull {
+  grid-column: 1 / -1;
+}
+
+.label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.35rem;
+}
+
+.inputRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+.readonly,
+.readonlyTextarea {
+  flex: 1;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #fafafa;
+  font-size: 0.9rem;
+  color: #1a1a1a;
+  min-height: 40px;
+}
+
+.readonlyTextarea {
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.input,
+.textarea {
+  flex: 1;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #8b1a1a;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 0.9rem;
+  color: #1a1a1a;
+  outline: none;
+  font-family: inherit;
+  transition: box-shadow 0.15s;
+}
+
+.input:focus,
+.textarea:focus {
+  box-shadow: 0 0 0 3px rgba(139, 26, 26, 0.1);
+}
+
+.textarea {
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.editBtn,
+.actionBtn {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  background: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  margin-top: 2px;
+}
+
+.editBtn {
+  color: #888;
+}
+
+.editBtn:hover {
+  color: #8b1a1a;
+  border-color: #8b1a1a;
+  background: #fef5f5;
+}
+
+.actionBtn {
+  color: #2e7d32;
+  border-color: #c8e6c9;
+}
+
+.actionBtn:hover {
+  background: #e8f5e9;
+  border-color: #81c784;
+}
+
+.rejectBtn {
+  color: #c62828;
+  border-color: #ffcdd2;
+}
+
+.rejectBtn:hover {
+  background: #ffebee;
+  border-color: #e57373;
+}

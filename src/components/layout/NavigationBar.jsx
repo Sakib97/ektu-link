@@ -72,7 +72,7 @@ const NavigationBar = () => {
                   as={Link}
                   to="/dashboard"
                   onClick={handleClose}
-                  className={styles.navLink}
+                  className={styles.getStarted}
                 >
                   {user?.user_metadata?.name || user?.email}
                 </Nav.Link>

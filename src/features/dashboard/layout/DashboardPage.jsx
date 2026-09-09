@@ -19,6 +19,7 @@ import { CgMenuLeftAlt } from "react-icons/cg";
 import { PiLinkSimpleBold } from "react-icons/pi";
 import styles from "./DashboardPage.module.css";
 import logo from "/eL2.png";
+import LogoutButton from "../../auth/components/LogoutButton";
 
 const navItems = [
   { to: "/dashboard/profile", icon: <FiUser />, label: "Profile" },
@@ -33,6 +34,11 @@ const navItems = [
 ];
 
 const DashboardPage = () => {
+  // controls logout
+  const [logoutLoading, setLogoutLoading] = useState(false);
+  // show logout confirmation modal
+  const [show, setShow] = useState(false);
+
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -88,15 +94,20 @@ const DashboardPage = () => {
           >
             <FiSettings /> Settings
           </NavLink>
-          <button className={styles.bottomLink} onClick={() => navigate("/")}>
+          <button className={styles.bottomLink} onClick={() => setShow(true)}>
             <FiLogOut /> Logout
           </button>
+          <LogoutButton
+            show={show}
+            setShow={setShow}
+            logoutLoading={logoutLoading}
+            setLogoutLoading={setLogoutLoading}
+          />
         </div>
       </aside>
 
       <div className={styles.main}>
         <header className={styles.topbar}>
-          
           <button
             className={styles.menuBtn}
             onClick={() => setSidebarOpen(true)}
@@ -130,14 +141,14 @@ const DashboardPage = () => {
           </div>
         </header>
 
-         <div className={styles.searchBoxMobile}>
-            <FiSearch className={styles.searchIcon} />
-            <input
-              type="text"
-              placeholder="Search links..."
-              className={styles.searchInput}
-            />
-          </div>
+        <div className={styles.searchBoxMobile}>
+          <FiSearch className={styles.searchIcon} />
+          <input
+            type="text"
+            placeholder="Search links..."
+            className={styles.searchInput}
+          />
+        </div>
 
         <div className={styles.content}>
           <Outlet />
