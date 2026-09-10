@@ -364,7 +364,7 @@
     border: 1px solid #acaaaa;
     border-radius: 20px;
     padding: 0.5rem 0.85rem;
-    flex: 1;
+    /* flex: 1; */
     max-width: 500px;
   
     /* Sets the top/bottom margins to 0 

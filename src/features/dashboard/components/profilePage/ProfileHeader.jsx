@@ -29,9 +29,9 @@ const ProfileHeader = ({ profile, planName }) => {
             <p className={styles.email}>{profile.email}</p>
           </div>
         </div>
-        <button className={styles.avatarBtn}>
+        {/* <button className={styles.avatarBtn}>
           <FiUpload /> Change Avatar
-        </button>
+        </button> */}
       </div>
     </div>
   );

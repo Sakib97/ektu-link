@@ -2,7 +2,7 @@ import EditableField from "./EditableField";
 import styles from "./PersonalInfo.module.css";
 
 const fields = [
-  { key: "name", label: "Full Name" },
+  { key: "name", label: "Full Name", readonly: true  },
   { key: "email", label: "Email Address", readonly: true },
 ];
 

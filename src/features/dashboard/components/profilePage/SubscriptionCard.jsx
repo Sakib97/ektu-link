@@ -1,4 +1,5 @@
 import styles from "./SubscriptionCard.module.css";
+import { getFormattedDate } from "../../../../utils/dateUtil";
 
 const SubscriptionCard = ({ subscription }) => {
   if (!subscription) return null;
@@ -13,17 +14,17 @@ const SubscriptionCard = ({ subscription }) => {
           <label className={styles.label}>Plan</label>
           <div className={styles.value}>{planName || "Free"}</div>
         </div>
-        <div className={styles.field}>
+        {/* <div className={styles.field}>
           <label className={styles.label}>Status</label>
           <div className={styles.value}>
             {subscription.is_expired ? "Expired" : subscription.status}
           </div>
-        </div>
+        </div> */}
         {subscription.started_at && (
           <div className={styles.field}>
             <label className={styles.label}>Started</label>
             <div className={styles.value}>
-              {new Date(subscription.started_at).toLocaleDateString()}
+              {getFormattedDate(subscription.started_at)}
             </div>
           </div>
         )}
